@@ -13,6 +13,7 @@
     font-family: cursive;
 }
 /*header*/
+
 .banner{
     display: grid;
     grid-template-columns: 7% 2% 7% 64% 20%;
@@ -48,8 +49,6 @@
 .social{
     display :inline-block;
     grid-template-columns: 4;
-
-
 }
 .social img{
     width: 30px;
@@ -229,8 +228,7 @@
     text-align: left; 
 }
 .about img{
-    display: block;
-    margin-left: auto;
+    margin-left: 10%;
     width: 80%;
 }
 
@@ -249,7 +247,7 @@
     background-color: white;
     padding: 20px;
     width: 70%;
-    margin: 10% 15% 20% 15%;
+    margin: 5% 15% 20% 15%;
 }
 input[type=text] {
     width: 100%;
@@ -286,6 +284,9 @@ input[type=submit]:hover {
 
 
 
+.dropdown{
+    display: none;
+}
 
 
 
@@ -305,10 +306,20 @@ input[type=submit]:hover {
         display:none;
     }
     .banner{
-        grid-template-columns: 7% 84%;
+        grid-template-columns: 7% 64% 20%;
     }
     .mode::before{
         content: "Tablette mode";
+    }
+    .contact{
+        background-image: linear-gradient(to right top, #befbff, #c1f4f1, #c4ece5, #c6e4db, #c8dcd3);
+    }
+    .dropdown{
+        display: none;
+    }
+    
+    .about{
+        background-color: #ecbdb6;
     }
 }
 
@@ -326,7 +337,7 @@ input[type=submit]:hover {
     }
     .banner{
         display: grid;
-        grid-template-columns: 7% 84%;
+        grid-template-columns: 7% 86% 7%;
         background-color: white;
         top:0px;
         border: 1px black ;
@@ -335,25 +346,49 @@ input[type=submit]:hover {
     }
 
     /* Styles pour les liens de navigation en mode téléphone */
-    .banner a {
-        display: block;
-        background-color: #0089ba;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        margin: 5px 0;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
 
-    .banner a:hover {
-        background-color: white;
-        color: #0089ba;
-        transform: scale(1.05);
-    }
     .mode::before{
         content: "Phone mode";
         color: white;
     }
+    .social{
+        display :none;
+    }
+    .contact{
+        background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    }
+    .liens{
+        display: none;
+    }
+
+    .mainmenubtn {
+        color: black;
+        border: none;
+        cursor: pointer;
+        font-size: 55px;
+        margin-left: 90%;
+        background-color: white;
+    }
+    .dropdown {
+        position: relative;
+        display: grid;
+    }
+    .dropdown-child {
+        display: none;
+        background-color: white;
+        text-align: right;
+    }
+    .dropdown-child a {
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        border-top: 1px solid;
+    }
+    .dropdown:hover .dropdown-child {
+        display: block;
+    }
+    .about{
+        background-color: #befbff;
+    }
+      
 }
